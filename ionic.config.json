@@ -1,0 +1,7 @@
+{
+  "name": "mythicals",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
