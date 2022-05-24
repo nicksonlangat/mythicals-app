@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
+  mythicals : any;
+  filterTerm: string;
   constructor() {}
-
+  removeBookmark(mythical){
+    this.mythicals.pop(mythical)
+    localStorage.setItem('bookmarks', JSON.stringify(this.mythicals))
+  }
+  ngOnInit(){
+    this.mythicals = JSON.parse(localStorage.getItem('bookmarks'))
+  }
 }
